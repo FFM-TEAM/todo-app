@@ -1,44 +1,57 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
-import "../App.css";
-
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var react_1 = __importStar(require("react"));
+//import PropTypes from "prop-types";
+//import "../App.css";
+// interface Props {
+//     title: string;
+// }
+// PropTypes
+// AddTodo.propTypes = {
+//     addTodo: PropTypes.func.isRequired
+// };
 function AddTodo(props) {
-    const [state, setState] = useState({
+    var _a = (0, react_1.useState)({
         title: ""
-    });
-
-    const onSubmit = e => {
+    }), state = _a[0], setState = _a[1];
+    var onSubmit = function (e) {
         e.preventDefault();
         props.addTodo(state.title);
         setState({ title: "" });
-    }
-
-    const onChange = e => setState({ [e.target.name]: e.target.value });
-
-    return (
-        <form onSubmit={onSubmit}>
-            <input
-                type="text"
-                name="title"
-                style={addTodoStyle}
-                value={state.title}
-                onChange={onChange}
-            />
-            <input
-                type="submit"
-                value=""
-                style={spaceshipStyle}
-                className="spaceshipClass"
-            />
-        </form>
-    );
-};
-
+    };
+    var onChange = function (e) {
+        var _a;
+        return setState((_a = {}, _a[e.target.name] = e.target.value, _a));
+    }; // TODO
+    return (react_1.default.createElement("form", { onSubmit: onSubmit },
+        react_1.default.createElement("input", { type: "text", name: "title", style: addTodoStyle, value: state.title, onChange: onChange }),
+        react_1.default.createElement("input", { type: "submit", value: "", style: spaceshipStyle, className: "spaceshipClass" })));
+}
+;
 // 인풋 창
-const addTodoStyle = {
+var addTodoStyle = {
     display: "block",
     width: "80%",
-    resize: "none",
+    // resize: "none", ???
     margin: "5.8rem auto 0 auto",
     padding: "0.1rem",
     backgroundColor: "transparent",
@@ -50,10 +63,9 @@ const addTodoStyle = {
     lineHeight: "1.1rem",
     color: "#EFEFEF"
 };
-
 // 로켓 버튼
 // 마우스 호버 css는 우선 App.css에 넣어놓았음.
-const spaceshipStyle = {
+var spaceshipStyle = {
     display: "block",
     width: "3.3rem",
     height: "10rem",
@@ -68,13 +80,4 @@ const spaceshipStyle = {
     alt: "rocketship",
     cursor: "pointer"
 };
-
-// PropTypes
-AddTodo.propTypes = {
-    addTodo: PropTypes.func.isRequired
-};
-
-
-
-export default AddTodo;
-
+exports.default = AddTodo;
