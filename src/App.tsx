@@ -51,7 +51,7 @@ function App() {
   }, []);
 
   // 추가
-  const addTodo = ( title:String ) => {
+  const addTodo = ( title:string ) => {
     const newTodo : Todo = {
       title,
       id: uuid.v4(),

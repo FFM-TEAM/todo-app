@@ -28,7 +28,7 @@
     min-height: 50rem;
     margin: 3rem auto 3rem auto;
     border: #ff5050 0.3rem solid;
-    background-image: url("/blueMoon.png");
+    background-image: url("./blueMoon.png");
     background-size: 100% 21rem;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -57,7 +57,7 @@
     width: 100%;
     box-sizing: border-box;
     margin: 0.2rem 0 0 0;
-    background-image: url("/stars1.png");
+    background-image: url("./stars1.png");
     background-size: 16rem 16rem;
     background-repeat: no-repeat;
     background-position: top left;
@@ -69,7 +69,7 @@
     width: 100%;
     box-sizing: border-box;
     margin: 0.1rem 0.1rem 0 0;
-    background-image: url("/stars2.png");
+    background-image: url("./stars2.png");
     background-size: 16rem 16rem;
     background-repeat: no-repeat;
     background-position: top right;
@@ -77,9 +77,9 @@
   
   /* 로켓 버튼 마우스 호버 */
   .spaceshipClass {
-    background-image: url("/rocket1.png");
+    background-image: url("./rocket1.png");
   }
   .spaceshipClass:hover {
-    background-image: url("/rocket2.png");
+    background-image: url("./rocket2.png");
   }
   
