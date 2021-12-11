@@ -77,15 +77,7 @@ interface CreateAction {
 
   // actions
 
-// 추가
-// const addTodo = ( title:string ) => {
-//     const newTodo : Todo = {
-//       title,
-//       id: uuid.v4(),
-//       status: "todo"
-//     };
-//     setState({ todos: [...state.todos, newTodo] });
-//   };
+
 
 function create( title:string ) {
     return {
@@ -97,11 +89,6 @@ function create( title:string ) {
         }
     }
 }
-
-// 삭제
-// const delTodo = ( id:string ) => {
-//     setState({ todos: [...state.todos.filter((todo:TodosProps) => todo.id !== id)] });
-//   };
 
 function remove( id:string ) {
     return {
@@ -137,23 +124,7 @@ function toggle(id: string) {
     changeInput
   };
 
-  // reducers
 
-//   export interface TodoState {
-//     todoItems: TodoItemDataParams[];
-//     input: string;
-// };
-
-  // 테스트 데이터, API 불러오기
-  // const getData = () => {
-  //   axios
-  //     .get("https://killsanghyuck.github.io/prography_5th_front/todoDummy.json")
-  //     .then(res => {
-  //       console.log(res, 'res');
-  //       setState({ todoItems: res.data.body });
-  //     });
-  // };
-    
 
   const initialState: TodoState = {
     todoItems: [],

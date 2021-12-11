@@ -16,7 +16,7 @@ interface Props {
 }
 
 
-class TodosContainer extends React.Component<Props> {
+class TodosContainer extends React.Component<Props> { //fuction
     onCreate = (): void => {
         const { TodosActions, input } = this.props;
         TodosActions.create(input);
